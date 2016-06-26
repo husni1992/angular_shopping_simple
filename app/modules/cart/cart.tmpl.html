@@ -1,0 +1,30 @@
+<h1>Test</h1>
+
+<button class="btn btn-primary" ui-sref="store">Back to store</button>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <thead class="well">
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.cartItems">
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.price}}</td>
+                    <td><button class="btn btn-danger" ng-click="vm.removeItemFromCart(item.sku)">X</button></td>
+                </tr>
+            </tbody>
+            <tr class="well">
+                <td style="font-weight: 600">Total</td>
+                <td style="font-weight: 600">{{vm.cartItems.length}}</td>
+                <td style="font-weight: 600">$ 55</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>

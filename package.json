@@ -1,0 +1,20 @@
+{
+  "name": "shoping_cart",
+  "version": "1.0.0",
+  "description": "Simple angular shopping cart",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "online",
+    "store"
+  ],
+  "author": "MG.HusnyAhamed",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1"
+  }
+}

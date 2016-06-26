@@ -1,0 +1,21 @@
+<h6 class="text-info">All items are show below</h6>
+
+<table class="table table-bordered">
+    <tr class="well">
+        <td style="text-align: right" colspan="5"><a ui-sref="mycart"><span class="glyphicon glyphicon-shopping-cart"></span>{{store.getItemsCount()}} Items | {{store.getTotalPrice() | currency}}</a></td>
+    </tr>
+    <tr ng-repeat="item in store.products">
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price | currency}}</td>
+        <td>{{item.sku}}</td>
+        <td style="text-align: center">
+            <a href="" ng-click="store.addItem(item)">
+                add to cart
+            </a>
+        </td>
+    </tr>
+    <tr class="well">
+        <td style="text-align: right" colspan="5"><a ui-sref="mycart"><span class="glyphicon glyphicon-shopping-cart"></span>{{store.getItemsCount()}} Items | {{store.getTotalPrice() | currency}}</a></td>
+    </tr>
+</table> 

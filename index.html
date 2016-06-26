@@ -1,0 +1,32 @@
+<html ng-app="app">
+    <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="app/modules/store/store.style.css">
+        
+        <script src="app/app.module.js"></script>
+        <script src="app/app.routes.js"></script>
+        
+        <script src="app/common/StoreDataService.js"></script>
+        <script src="app/modules/store/store.controller.js"></script>
+        <script src="app/modules/cart/cart.controller.js"></script>
+    </head>
+    <body>
+       <div class="container-fluid">
+        <div>
+            <h1 class="well" >
+                <a href="default.htm">
+                    <img src="assets/img/onlinestore.jpg" height="60" width="60" alt="logo"/>
+                </a>
+                Angular Store 
+            </h1>
+            <ui-view></ui-view>
+        </div>
+        
+    </div>
+        
+    </body>
+</html>
