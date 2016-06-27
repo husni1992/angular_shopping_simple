@@ -24,7 +24,7 @@
         }
         
         function addItem(item){
-            StoreDataService.addToCart(item);
+            StoreDataService.addToCart(item, 1);
         }
         
         function getItemsCount(){
