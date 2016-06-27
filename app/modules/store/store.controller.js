@@ -27,14 +27,14 @@
             StoreDataService.addToCart(item, 1);
         }
         
-        function getItemsCount(){
-            var count = 0;
-            var items = vm.itemsInCart;
-            for(var i = 0; i < items.length; i++){
-                count += items[i].quantity;
+            function getItemsCount(){
+                var count = 0;
+                var items = vm.itemsInCart;
+                for(var i = 0; i < items.length; i++){
+                    count += items[i].quantity;
+                }
+                return count;
             }
-            return count;
-        }
         
          function getTotalPrice(){
             var price = 0;

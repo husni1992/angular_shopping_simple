@@ -14,7 +14,7 @@
         vm.removeItemFromCart = removeItemFromCart;
         vm.clearCart = clearCart;
         
-        function removeItemFromCart(itemSku){
+        function removeItemFromCart(itemSku, qty){
             StoreDataService.removeItemFromCart(itemSku);
         }
         

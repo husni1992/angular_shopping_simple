@@ -44,6 +44,9 @@
                 if(currentItem.sku == item.sku){
                     found = true;
                     currentItem.quantity = toNumber(currentItem.quantity + qty);
+                    if(currentItem.quantity <= 0){
+                        itemsInCart.splice(i, 1);
+                    }
                 }
             }
                 
@@ -53,6 +56,16 @@
                 itemsInCart.push(cartItem);
             }
             
+            syncStoreDatabase();
+        }
+        
+        function removeItemFromCart(item){
+            for(var i = 0; i < itemsInCart.length; i++){
+                var currentItem = itemsInCart[i];
+                if(currentItem.sku == item.sku){
+                    itemsInCart.splice(i, 1);
+                }
+            }
             syncStoreDatabase();
         }
         
@@ -76,19 +89,7 @@
                 }
             }
             return itemsInCart;
-        }
-        
-        function removeItemFromCart(itemSku){
-            var removeItemName = "";
-            for(var i = 0; i < itemsInCart.length; i++){
-                if(itemsInCart[i].sku == itemSku){
-                    removeItemName = itemsInCart[i].name;
-                    itemsInCart.splice(1,i);
-                }
-            }
-            syncStoreDatabase();
-            console.info('Removed: '+removeItemName);
-        }
+        }                
         
         function clearCart(){
             itemsInCart.length = 0;
