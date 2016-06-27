@@ -21,8 +21,8 @@
             </tbody>
             <tr class="well">
                 <td style="font-weight: 600">Total</td>
-                <td style="font-weight: 600">{{vm.cartItems.length}}</td>
-                <td style="font-weight: 600">$ 55</td>
+                <td style="font-weight: 600">{{vm.getItemsCount()}}</td>
+                <td style="font-weight: 600">{{vm.getTotalPrice() | currency}}</td>
                 <td></td>
             </tr>
         </table>
