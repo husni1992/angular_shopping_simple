@@ -12,7 +12,8 @@
             getAllItems: getAllProducts,
             getItemsInCart: getItemsInCart,
             addToCart: addToCart,
-            removeItemFromCart: removeItemFromCart
+            removeItemFromCart: removeItemFromCart,
+            clearCart: clearCart
         };
         
         var itemsInCart = [];
@@ -40,7 +41,7 @@
             var found = false;
             for(var i = 0; i < itemsInCart.length; i++){
                 var currentItem = itemsInCart[i];
-                if(currentItem.sku = item.sku){
+                if(currentItem.sku == item.sku){
                     found = true;
                     currentItem.quantity = toNumber(currentItem.quantity + qty);
                 }
@@ -87,6 +88,12 @@
             }
             syncStoreDatabase();
             console.info('Removed: '+removeItemName);
+        }
+        
+        function clearCart(){
+            itemsInCart.length = 0;
+            syncStoreDatabase();
+            console.warn("Cleaered cart")
         }
         
         

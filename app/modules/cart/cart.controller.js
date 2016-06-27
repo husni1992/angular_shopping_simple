@@ -12,9 +12,14 @@
         
         vm.cartItems = StoreDataService.getItemsInCart();
         vm.removeItemFromCart = removeItemFromCart;
+        vm.clearCart = clearCart;
         
         function removeItemFromCart(itemSku){
             StoreDataService.removeItemFromCart(itemSku);
+        }
+        
+        function clearCart(){
+            StoreDataService.clearCart();
         }
     }
     
